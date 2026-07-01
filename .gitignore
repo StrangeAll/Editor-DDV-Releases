@@ -1,0 +1,28 @@
+# Local files
+*.zip
+*.7z
+*.rar
+*.log
+*.tmp
+
+# Build and app output
+bin/
+obj/
+releases/
+Portable/
+DreamlightEditor-Public-Beta-Portable/
+
+# Save files and exports
+profile.json
+*_decrypted*.json
+*decrypted*.json
+Backups/
+Savegames/
+Exports/
+DecryptedExports/
+
+# Secrets
+Secrets/
+Keys/
+*.key
+*.token
