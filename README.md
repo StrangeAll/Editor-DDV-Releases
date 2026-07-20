@@ -4,6 +4,8 @@ A portable Windows save editor for Disney Dreamlight Valley, built to make caref
 
 Version 0.9.7 adds new editing tools, clearer item handling, automatic editor-data updates, and email sign-in to help keep the editor free and reduce commercial misuse.
 
+📘 **Need detailed instructions?** Open the [complete DDV Wizard Editor User & Team Guide](DDV_WIZARD_EDITOR_USER_GUIDE.md). It explains every category, backup workflow, bulk action, repair tool, warning, and support check without exposing the separate internal License Control system.
+
 ## ✨ Features
 
 - Load supported Disney Dreamlight Valley `profile.json` save files.
