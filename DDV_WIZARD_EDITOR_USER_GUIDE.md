@@ -1,6 +1,6 @@
-# DDV Wizard Editor – User & Team Guide
+# DDV Wizard Editor – User Guide
 
-This guide explains the public DDV Wizard Editor from a user and support perspective. It covers opening, editing, checking, and restoring save files without exposing the separate internal License Control system.
+This guide explains how to use the public DDV Wizard Editor. It covers opening, editing, checking, and restoring save files in version **0.9.7**.
 
 The guide is written for version **0.9.7**. Menu names may move slightly in later versions, but the safety rules remain the same.
 
@@ -27,7 +27,6 @@ The guide is written for version **0.9.7**. Menu names may move slightly in late
 19. Saving and validating a save
 20. Common warnings and errors
 21. Safety rules
-22. Support checklist for the team
 
 ## 1. Before you start
 
@@ -140,7 +139,7 @@ There is no reason to rely on only one automatic backup.
 4. Rename it to **profile.json** if needed.
 5. Start the game before making more editor changes.
 
-Do not post a profile.json publicly. If support needs the file, use the private method provided by the team.
+Do not post a profile.json publicly. If support needs the file, use a private support channel.
 
 ## 7. Understanding the main window
 
@@ -596,7 +595,7 @@ Manual JSON editing is the highest-risk part of the editor. Do not change sectio
 
 The separate **Tools > Convert String to JSON** utility converts simple two-column text such as an item ID followed by a name into a formatted JSON dictionary.
 
-This helper is mainly useful to team members preparing or checking item lists. It does not edit the loaded save automatically. Review and copy its output only when you understand where that data belongs.
+This helper is mainly useful to advanced users preparing or checking item lists. It does not edit the loaded save automatically. Review and copy its output only when you understand where that data belongs.
 
 ## 19. Saving and validating a save
 
@@ -654,7 +653,7 @@ The Full Editor or imported file contains a syntax error. Use the reported line 
 
 ### Protected or excluded item skipped
 
-The item is intentionally blocked from that operation. Do not work around the protection by forcing it through JSON unless the team has verified the exact save requirement.
+The item is intentionally blocked from that operation. Do not work around the protection by forcing it through JSON unless the exact save requirement has been verified.
 
 ### Item already exists
 
@@ -700,44 +699,6 @@ Known unsafe or blocked examples:
 - Protected tools, skins, mounts, gliders, memories, and other excluded entries should remain protected.
 
 Prefer individual additions over Add All when only one or two items are needed.
-
-## 22. Support checklist for the team
-
-This section is for moderators and helpers assisting an editor user. It does not describe the internal License Control dashboard.
-
-Ask for:
-
-- editor version and build from the title bar;
-- the player name and level shown after loading;
-- the exact category or Tools action used;
-- what the user expected;
-- what happened in the editor;
-- what happened in the game;
-- whether the game was closed during editing;
-- whether the save loaded before the change;
-- the exact warning or error text;
-- a screenshot when useful;
-- whether an original or automatic backup exists.
-
-First checks:
-
-1. Confirm the user has the newest official release.
-2. Confirm the ZIP was fully extracted.
-3. Confirm the correct profile.json was selected.
-4. Confirm the user did not mix files from older releases.
-5. Confirm the game was closed.
-6. Restore the last known-good backup.
-7. Repeat only the smallest necessary change.
-8. Determine whether the problem appears in the editor, during game loading, or only inside a specific game menu.
-
-If a save is required for investigation:
-
-- request it privately;
-- keep the untouched original;
-- work on a copy;
-- record the action that caused the problem;
-- compare before and after files where possible;
-- do not promise that an unknown or quest-related item is safe without verification.
 
 ## Final reminder
 
