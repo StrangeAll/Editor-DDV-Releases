@@ -2,7 +2,7 @@
 
 A portable Windows save editor for Disney Dreamlight Valley, built to make careful changes easier to understand, review, and undo.
 
-Version 0.9.8 adds safer furniture tools, new event and long-term duty actions, automatic full-editor updates, and improved sign-in support while keeping the editor portable.
+Version 0.9.8 adds safer furniture tools, new event and long-term duty actions, automatic full-editor updates, improved sign-in support, and a persistent Light/Dark appearance switch while keeping the editor portable.
 
 📘 **Need detailed instructions?** Open the [complete DDV Wizard Editor User Guide](DDV_WIZARD_EDITOR_USER_GUIDE.md). It explains every category, backup workflow, bulk action, repair tool, warning, and common error.
 
@@ -64,6 +64,7 @@ The main editor provides organized views for supported save content such as play
 Useful tools in version 0.9.8 include:
 
 - **Expansion filter** — show All Content, Base Game, Eternity Isle, Storybook Vale, Wishblossom Ranch, or Honeyglow Woods across the editor. This changes only the visible list and does not delete anything.
+- **Light / Dark mode** — switch between the normal light appearance and the dark appearance with the button in the main toolbar. The choice is remembered after restart.
 - **Show Missing Dict Items** — display supported items that are not currently in the loaded save, so you can add only what you want.
 - **All Save Items (including unknown) - Beta!** — inspect unknown, blocked, or misplaced inventory entries and remove entries you have positively identified as incorrect.
 - **Evolving** — add the supported tool or Elegant Firework Wings variants together with their required Level 2 and Level 3 progress.
