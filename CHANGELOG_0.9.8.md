@@ -4,6 +4,8 @@
 
 - Added a toolbar button to switch between the normal Light mode and Dark mode.
 - The selected appearance is remembered after the editor is restarted.
+- Improved Dark mode contrast for warning, problem, and missing-Dict rows.
+- Removed remaining bright system surfaces from the category tabs and expansion filter.
 
 ## Furniture
 

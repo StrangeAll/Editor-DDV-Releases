@@ -56,6 +56,8 @@ Do not start the editor directly from inside the ZIP. If Windows reports that a 
 
 The title bar displays the editor version and build. Include both when reporting a problem.
 
+Use the **Dark mode** or **Light mode** button in the main toolbar to change the appearance. Your choice is remembered for the next start.
+
 ## 3. Sign-in and activation
 
 The public editor requires an email sign-in.
@@ -550,7 +552,7 @@ Before deleting:
 3. Read the storage and status columns.
 4. Never delete an unknown entry only because its name is missing.
 
-Light red rows are mission or friendship-quest items and require extra caution. Normal recognised quest and friendship rewards already owned by the save are not marked red.
+Rows with a red warning tint are mission or friendship-quest items and require extra caution. In Dark mode the same warning uses a dark red background with light text. Normal recognised quest and friendship rewards already owned by the save are not marked red.
 
 ## 18. Full JSON Editor
 

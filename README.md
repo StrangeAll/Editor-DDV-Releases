@@ -22,6 +22,7 @@ Version 0.9.8 adds safer furniture tools, new event and long-term duty actions, 
 - Export or import decrypted JSON.
 - Receive protected Dict updates automatically without downloading the complete editor again.
 - Receive signed full-editor updates with release notes and automatic rollback if installation fails.
+- Switch between the normal Light mode and a persistent high-contrast Dark mode from the main toolbar.
 - Use a temporary Support Code directly from the first sign-in window when email delivery fails.
 - Copy the shown Support ID when an activation or save-profile error needs investigation.
 - Complete the supported Cheshire Cat Chaos memory, achievements, and missing rewards.
@@ -37,7 +38,7 @@ The editor includes several safeguards, but every save edit still deserves care:
 - JSON is checked before imported or manually edited data is accepted.
 - Invalid JSON is stopped with a useful error instead of being written blindly.
 - Existing item data is preserved where the editor supports it.
-- Mission and friendship-quest items are highlighted in light red when they need extra caution.
+- Mission and friendship-quest items use a red warning tint when they need extra caution.
 - Normal quest and friendship rewards already owned by the save are not marked as dangerous.
 - Known unsafe additions are blocked. Pixel Dust cannot be edited as a currency, and Pooh's Thoughtful Spot ID `40005832` cannot be newly added.
 - Items that already exist in a save can still be displayed so an incorrect entry can be found and removed.
