@@ -1,8 +1,8 @@
 # DDV Wizard Editor – User Guide
 
-This guide explains how to use the public DDV Wizard Editor. It covers opening, editing, checking, and restoring save files in version **0.9.7**.
+This guide explains how to use the public DDV Wizard Editor. It covers opening, editing, checking, and restoring save files in version **0.9.8**.
 
-The guide is written for version **0.9.7**. Menu names may move slightly in later versions, but the safety rules remain the same.
+The guide is written for version **0.9.8**. Menu names may move slightly in later versions, but the safety rules remain the same.
 
 ## Contents
 
@@ -61,9 +61,11 @@ The title bar displays the editor version and build. Include both when reporting
 The public editor requires an email sign-in.
 
 1. Enter an email address you can access.
-2. Select **Send code**.
+2. Select **Send email code**.
 3. Enter the six-digit code sent to that inbox.
 4. Select **Sign in**.
+
+If email delivery fails, support can create a temporary six-digit Support Code. Enter the same email address and that code in the first sign-in window, then select **Use Support Code**. You do not need to request another email before using it. Support Codes expire, work once, and do not bypass an explicitly blocked license.
 
 The sign-in is normally remembered on that computer. A new code should not be required every time the editor starts.
 
@@ -81,13 +83,16 @@ The sign-in requirement exists because a small number of people used the free ed
 - **Activation blocked or manual review required:** contact support rather than repeatedly registering new details.
 - **Editor version no longer authorized:** download the newest official release.
 - **Protected editor data could not be unlocked:** connect to the internet and restart the editor.
+- **A Support ID is shown:** copy it and include it in your support message. It identifies the exact failed request without requiring your save file or private Windows paths.
 
-## 4. Automatic editor-data updates
+## 4. Automatic editor and editor-data updates
 
 The editor can receive updated item lists and corrections without requiring a completely new download.
 
 - Updates are checked during startup.
 - The downloaded editor data is protected and verified before use.
+- A signed complete-editor update may also be offered at startup. Its version, release notes, package hash, and signed manifest are verified before any file is replaced.
+- If a complete update cannot be installed successfully, the updater restores the previous editor files.
 - A message named **Editor Data Updated** appears when a new update was installed successfully.
 - If an update is unavailable or damaged, the editor falls back to a valid cached or built-in copy where possible.
 

@@ -2,7 +2,7 @@
 
 A portable Windows save editor for Disney Dreamlight Valley, built to make careful changes easier to understand, review, and undo.
 
-Version 0.9.7 adds new editing tools, clearer item handling, automatic editor-data updates, and email sign-in to help keep the editor free and reduce commercial misuse.
+Version 0.9.8 adds safer furniture tools, new event and long-term duty actions, automatic full-editor updates, and improved sign-in support while keeping the editor portable.
 
 📘 **Need detailed instructions?** Open the [complete DDV Wizard Editor User Guide](DDV_WIZARD_EDITOR_USER_GUIDE.md). It explains every category, backup workflow, bulk action, repair tool, warning, and common error.
 
@@ -21,6 +21,12 @@ Version 0.9.7 adds new editing tools, clearer item handling, automatic editor-da
 - Open the Full Editor for advanced JSON inspection and careful manual changes.
 - Export or import decrypted JSON.
 - Receive protected Dict updates automatically without downloading the complete editor again.
+- Receive signed full-editor updates with release notes and automatic rollback if installation fails.
+- Use a temporary Support Code directly from the first sign-in window when email delivery fails.
+- Copy the shown Support ID when an activation or save-profile error needs investigation.
+- Complete the supported Cheshire Cat Chaos memory, achievements, and missing rewards.
+- Complete supported permanent long-term duties without changing daily duty slots or rerolls.
+- Use dedicated Furniture views and bulk actions for Specials and Presets.
 - Create backups before important or immediate save operations.
 
 ## 🛡️ Safety First
@@ -55,7 +61,7 @@ Only import a complete, valid save structure. If you are unsure about a manual J
 
 The main editor provides organized views for supported save content such as player inventory, pets, clothes, houses, furniture, makeup, skins, wallpaper and flooring, meals, memories, and other available categories.
 
-Useful tools in version 0.9.7 include:
+Useful tools in version 0.9.8 include:
 
 - **Expansion filter** — show All Content, Base Game, Eternity Isle, Storybook Vale, Wishblossom Ranch, or Honeyglow Woods across the editor. This changes only the visible list and does not delete anything.
 - **Show Missing Dict Items** — display supported items that are not currently in the loaded save, so you can add only what you want.
@@ -66,6 +72,9 @@ Useful tools in version 0.9.7 include:
 - **Manage House Floors** — clear the first floor or remove selected higher floors while returning placed furniture to the Furniture inventory.
 - **Memories tools** — manage supported memories while protecting story and quest memories with additional warnings.
 - **Automatic Dict updates** — install new item lists and corrections after startup. The editor shows a short confirmation when an update has been applied.
+- **Automatic editor updates** — download a signed complete release from inside the editor. The previous installation is restored if the update cannot be verified or installed.
+- **Add Cheshire Cat Chaos** — add only the missing supported event memory, achievements, and rewards.
+- **Complete All Long-Term Duties (No Dailies)** — complete supported permanent Dreamlight, Mist, and Story Magic duties while leaving daily duties untouched.
 
 Beta tools are clearly marked because they can touch a wider part of the save. Read their confirmation message and use them only for the problem they describe.
 
@@ -84,12 +93,13 @@ If Windows reports a missing runtime, install the free **Microsoft .NET 8 Deskto
 
 1. Close Disney Dreamlight Valley.
 2. Start the editor and enter your email address.
-3. Enter the six-digit sign-in code sent directly to your inbox.
-4. Open **Tools > Load Save** and select the correct `profile.json`.
-5. Check the displayed player name and level before editing.
-6. Make the changes you need in the category tabs or Tools menu.
-7. Use **Tools > Save** for normal editor changes.
-8. Start the game and check the result carefully.
+3. Choose **Send email code**, then enter the six-digit code sent directly to your inbox.
+4. If email delivery fails and support gives you a temporary code, enter the same email and choose **Use Support Code** instead.
+5. Open **Tools > Load Save** and select the correct `profile.json`.
+6. Check the displayed player name and level before editing.
+7. Make the changes you need in the category tabs or Tools menu.
+8. Use **Tools > Save** for normal editor changes.
+9. Start the game and check the result carefully.
 
 Sign-in is normally remembered, so you should not need a new code every time the editor starts. One activation is intended for one Windows PC and can be linked to up to three different save profiles.
 
@@ -128,6 +138,8 @@ When reporting a problem, include the editor version shown at the top, the categ
 - Confirm that the ZIP was completely extracted and that all included files remain together.
 - Make sure you are using the latest official release.
 - Check the spam folder if the sign-in email does not appear immediately.
+- If support provides a temporary code, enter it directly with your email and choose **Use Support Code**. You do not need to request another email first.
+- Copy the Support ID shown with an activation or profile error so support can find the exact request without asking for your save file.
 - Use **Validate** in the Full Editor after any manual JSON change.
 - If imported JSON is rejected, confirm that it is valid JSON and still contains the complete expected save structure.
 - If an automatic data update is applied, restart the editor before checking the updated item list.
