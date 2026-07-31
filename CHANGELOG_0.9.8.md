@@ -1,5 +1,10 @@
 # DDV Wizard Editor 0.9.8
 
+## Appearance
+
+- Added a toolbar button to switch between the normal Light mode and Dark mode.
+- The selected appearance is remembered after the editor is restarted.
+
 ## Furniture
 
 - Added dedicated Furniture tabs for Specials and Presets.
