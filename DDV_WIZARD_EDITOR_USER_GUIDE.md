@@ -1,8 +1,8 @@
 # DDV Wizard Editor – User Guide
 
-This guide explains how to use the public DDV Wizard Editor. It covers opening, editing, checking, and restoring save files in version **0.9.8**.
+This guide explains how to use the public DDV Wizard Editor. It covers opening, editing, checking, and restoring save files in version **0.9.9**.
 
-The guide is written for version **0.9.8**. Menu names may move slightly in later versions, but the safety rules remain the same.
+The guide is written for version **0.9.9**. Menu names may move slightly in later versions, but the safety rules remain the same.
 
 ## Contents
 
@@ -22,11 +22,12 @@ The guide is written for version **0.9.8**. Menu names may move slightly in late
 14. Evolving tools and wings
 15. Manage House Floors
 16. Fixes and repair tools
-17. Missing, unknown, blocked, and misplaced items
-18. Full JSON Editor
-19. Saving and validating a save
-20. Common warnings and errors
-21. Safety rules
+17. Long-term Duties and Scramblecoin
+18. Missing, unknown, blocked, and misplaced items
+19. Full JSON Editor
+20. Saving and validating a save
+21. Common warnings and errors
+22. Safety rules
 
 ## 1. Before you start
 
@@ -91,6 +92,8 @@ The sign-in requirement exists because a small number of people used the free ed
 
 The editor can receive updated item lists and corrections without requiring a completely new download.
 
+Users still on a **0.9.7** build must download version 0.9.9 manually once because those older builds cannot reliably install this full-editor update. Users on **0.9.8-hardened-14** can use the signed automatic updater after the release is enabled.
+
 - Updates are checked during startup.
 - The downloaded editor data is protected and verified before use.
 - A signed complete-editor update may also be offered at startup. Its version, release notes, package hash, and signed manifest are verified before any file is replaced.
@@ -127,7 +130,7 @@ Two useful backup locations may be used:
 
 The rolling backup folder keeps the original safety copy and a limited number of newer backups for the same save location.
 
-Some focused tools, such as House Floor management, Collection repair, and deletion from All Save Items, create their own backup before changing the save.
+Some focused tools, such as House Floor management, Floating Island cleanup, and deletion from All Save Items, create their own backup before changing the save.
 
 ### Manual backup
 
@@ -182,6 +185,8 @@ The Expansion menu applies across supported categories:
 - Honeyglow Woods
 
 This is only a display filter. Choosing an expansion does not add, delete, lock, or change ownership of any item.
+
+Select **Scrooge Store** to show supported entries identified as Scrooge Store content. Like the expansion choices, this changes only the visible list and never save ownership.
 
 Expansion detection uses the current editor data. If an item appears under the wrong expansion or is not found, return to **All content** and search by item ID.
 
@@ -281,6 +286,8 @@ Large furniture batches can make a save harder to review. Add only what is neede
 The Player Inventory tab shows items stored in the player backpack or related player inventory section.
 
 You can add, remove, or change supported amounts. Be careful with quest objects, currencies represented as items, progression objects, and unknown IDs.
+
+The searchable item catalogue lets you choose supported backpack items, set an amount, and add the selected entries. Quest-related items use a warning colour and should be added only to repair a known problem. Where manual entry is supported, an item can be added by ID without also typing its name; known names are resolved automatically.
 
 Inventory capacity is handled separately through **Fix Inventory Space**.
 
@@ -456,7 +463,7 @@ This action adds the supported Evolving Watering Can, Pickaxe, and Fishing Rod d
 
 ### Elegant Firework Wings to Level 3
 
-This adds the supported wings and completes their supported progression.
+This adds the supported base wings and completes their supported progression. Level 2 and Level 3 appearances are progression states, not separate inventory items.
 
 Do not manually add only a Level 3 tool variant. The game checks both the owned variants and the Evolve progress. An incomplete manual edit can make the tool disappear or become unusable.
 
@@ -488,22 +495,31 @@ The repair:
 - returns wing gliders to Clothes;
 - keeps ground gliders in the Gliders inventory.
 
-### Repair Collection From Owned Items (Beta)
+### Fix Clothing, Make-up, Tool, Wing & Glider Quantities
 
-Use this when the save owns items but the Collection does not recognise them, or when completed Collection groups contain contradictory locked entries.
+Use this when unique items have impossible amounts or tools and gliders were duplicated accidentally. The repair merges duplicate tool entries and returns unique items to their supported amount. Known Clothing and Make-up entries that legitimately occur more than once keep their verified maximum.
 
-The repair:
+### Remove Broken 2x2 Item Variants
 
-- unlocks supported Collection entries for item IDs the save actually owns;
-- corrects contradictory group states;
-- respects explicitly excluded IDs;
-- does not add inventory items;
-- does not invent new Collection IDs;
-- creates a backup and a report when changes are needed.
+This removes only confirmed unusable Furniture, Path, and Fence variants that may appear as white 2x2 cards in game. Valid base items and unconfirmed unknown IDs remain untouched.
 
-This is a repair tool, not an Add All function. Do not use it to obtain items the save does not own.
+### Fix Miscategorized & Invalid Items (Beta)
 
-## 17. Missing, unknown, blocked, and misplaced items
+This repairs supported Player inventory entries stored in the wrong category without broadly deleting unknown data. Read the confirmation carefully and keep a backup.
+
+### Floating Island Cleaner
+
+Choose an island and use the safer loose-item cleanup for stuck resource stacks, or Full cleanup when the island should be emptied. Full cleanup preserves the travel well, returns supported placed objects to the correct inventories, and removes loose resources, chest contents, and nested cleanup data. Review the result summary before opening the save in game.
+
+## 17. Long-term Duties and Scramblecoin
+
+Open **Tools > Duties > Choose Long-Term Duties** to review supported permanent duties. The window shows names, IDs, current progress, stage, and completion state. Search the list, sort progress or stages in either direction, return to the original order, complete only selected duties, or set a precise lower or higher progress value. Daily slots, rerolls, daily progress, and unsupported events are not changed.
+
+**Complete All Long-Term Duties (No Dailies)** remains available when every supported permanent duty should be completed at once.
+
+Open **Tools > Scramblecoin** to add verified figures or correct ranking points. The editor uses only confirmed figure data and preserves unrelated progress.
+
+## 18. Missing, unknown, blocked, and misplaced items
 
 ### Show Missing Dict Items
 
@@ -554,7 +570,7 @@ Before deleting:
 
 Rows with a red warning tint are mission or friendship-quest items and require extra caution. In Dark mode the same warning uses a dark red background with light text. Normal recognised quest and friendship rewards already owned by the save are not marked red.
 
-## 18. Full JSON Editor
+## 19. Full JSON Editor
 
 Open **Tools > Full Editor** for advanced inspection.
 
@@ -604,7 +620,7 @@ The separate **Tools > Convert String to JSON** utility converts simple two-colu
 
 This helper is mainly useful to advanced users preparing or checking item lists. It does not edit the loaded save automatically. Review and copy its output only when you understand where that data belongs.
 
-## 19. Saving and validating a save
+## 20. Saving and validating a save
 
 ### Normal category edits
 
@@ -640,7 +656,7 @@ After editing, check:
 - Evolving tools remain selectable and usable;
 - no new loading error appears.
 
-## 20. Common warnings and errors
+## 21. Common warnings and errors
 
 ### No save loaded
 
@@ -678,11 +694,15 @@ The save identity is connected to another activation. Support must review the le
 
 Old releases can be disabled when they are unsafe or incompatible. Download the newest official build and do not mix its files with the old folder.
 
+### All Areas shows 100% while individual areas are incomplete
+
+Some saves currently show 100% for the combined All Areas value even though individual expansions or categories remain below 100%. Conservative repair attempts did not change that combined value reliably while the individual stored Collection data remained correct. Current evidence points to a game-side display or recalculation issue following a game update. The editor does not intentionally set every area to 100% and avoids a risky broad rewrite of real saves.
+
 ### Update message appears
 
 **Editor Data Updated** is informational. The newest supported item data and corrections are ready.
 
-## 21. Safety rules
+## 22. Safety rules
 
 Never:
 

@@ -2,7 +2,7 @@
 
 A portable Windows save editor for Disney Dreamlight Valley, built to make careful changes easier to understand, review, and undo.
 
-Version 0.9.8 adds safer furniture tools, new event and long-term duty actions, automatic full-editor updates, improved sign-in support, and a persistent Light/Dark appearance switch while keeping the editor portable.
+Version 0.9.9 expands the repair tools, adds detailed long-term duty controls, improves safe bulk actions, and keeps the portable release folder much easier to understand.
 
 📘 **Need detailed instructions?** Open the [complete DDV Wizard Editor User Guide](DDV_WIZARD_EDITOR_USER_GUIDE.md). It explains every category, backup workflow, bulk action, repair tool, warning, and common error.
 
@@ -10,12 +10,14 @@ Version 0.9.8 adds safer furniture tools, new event and long-term duty actions, 
 
 - Load supported Disney Dreamlight Valley `profile.json` save files.
 - Browse and edit save content in clear category tabs.
-- Search items and filter visible content by expansion.
+- Search items and filter visible content by expansion or Scrooge Store source.
+- Add backpack items from a searchable Player Inventory catalogue with adjustable amounts and quest-item warnings.
+- Enter a supported item ID without also typing its name.
 - Add or remove individual items, including wallpaper, flooring, meals, memories, and other supported content.
 - Keep multi-selected rows selected when opening the right-click menu.
 - Show items already present in the save even when they are unknown, unavailable, or blocked from being added again.
 - Inspect player inventories with **All Save Items (including unknown) - Beta!**
-- Use focused fixes for duplicate gliders and Collection progress.
+- Use focused fixes for duplicate gliders, invalid 2x2 variants, miscategorized inventory entries, and incorrect unique-item quantities.
 - Manage player-house floors and return furniture from removed floors to the inventory.
 - Complete supported Evolving tool and wing progression correctly.
 - Open the Full Editor for advanced JSON inspection and careful manual changes.
@@ -27,6 +29,9 @@ Version 0.9.8 adds safer furniture tools, new event and long-term duty actions, 
 - Copy the shown Support ID when an activation or save-profile error needs investigation.
 - Complete the supported Cheshire Cat Chaos memory, achievements, and missing rewards.
 - Complete supported permanent long-term duties without changing daily duty slots or rerolls.
+- Review, sort, complete, or carefully correct individual long-term duty progress.
+- Clean stuck objects from Floating Islands while preserving the travel well.
+- Unlock verified Scramblecoin figures or correct ranking points.
 - Use dedicated Furniture views and bulk actions for Specials and Presets.
 - Create backups before important or immediate save operations.
 
@@ -62,21 +67,28 @@ Only import a complete, valid save structure. If you are unsure about a manual J
 
 The main editor provides organized views for supported save content such as player inventory, pets, clothes, houses, furniture, makeup, skins, wallpaper and flooring, meals, memories, and other available categories.
 
-Useful tools in version 0.9.8 include:
+Useful tools in version 0.9.9 include:
 
 - **Expansion filter** — show All Content, Base Game, Eternity Isle, Storybook Vale, Wishblossom Ranch, or Honeyglow Woods across the editor. This changes only the visible list and does not delete anything.
+- **Scrooge Store filter** — show supported Scrooge Store entries without changing save ownership.
 - **Light / Dark mode** — switch between the normal light appearance and the dark appearance with the button in the main toolbar. The choice is remembered after restart.
 - **Show Missing Dict Items** — display supported items that are not currently in the loaded save, so you can add only what you want.
 - **All Save Items (including unknown) - Beta!** — inspect unknown, blocked, or misplaced inventory entries and remove entries you have positively identified as incorrect.
 - **Evolving** — add the supported tool or Elegant Firework Wings variants together with their required Level 2 and Level 3 progress.
 - **Fix Duplicate Gliders** — remove duplicate glider data and return wing gliders to the correct inventory.
-- **Repair Collection From Owned Items (Beta)** — reconnect Collection entries for items the save genuinely owns without adding new inventory items.
 - **Manage House Floors** — clear the first floor or remove selected higher floors while returning placed furniture to the Furniture inventory.
 - **Memories tools** — manage supported memories while protecting story and quest memories with additional warnings.
 - **Automatic Dict updates** — install new item lists and corrections after startup. The editor shows a short confirmation when an update has been applied.
 - **Automatic editor updates** — download a signed complete release from inside the editor. The previous installation is restored if the update cannot be verified or installed.
 - **Add Cheshire Cat Chaos** — add only the missing supported event memory, achievements, and rewards.
 - **Complete All Long-Term Duties (No Dailies)** — complete supported permanent Dreamlight, Mist, and Story Magic duties while leaving daily duties untouched.
+- **Choose Long-Term Duties** — review duty names, IDs, progress, stages, and completion state; sort the list, finish selected duties, or correct an unreasonable progress value manually.
+- **Fix Clothing, Make-up, Tool, Wing & Glider Quantities** — return accidental duplicate ownership amounts to one while preserving the known clothing and make-up entries that legitimately use larger values.
+- **Remove Invalid Furniture, Path & Fence Variants** — remove known broken or internal variants, including the placeholder entries that appear as 2x2 cards in game.
+- **Floating Island Cleaner** — remove stuck island objects and furniture while preserving the travel well required to reach the island.
+- **Repair Miscategorized Inventory Items** — move supported entries back into the correct save inventory without adding items the player does not own.
+- **Player Inventory catalogue** — search supported backpack items, choose an amount, and review quest-item warnings before adding anything.
+- **Scramblecoin** — add verified figures or correct ranking points while preserving unrelated progress.
 
 Beta tools are clearly marked because they can touch a wider part of the save. Read their confirmation message and use them only for the problem they describe.
 
@@ -87,9 +99,15 @@ Beta tools are clearly marked because they can touch a wider part of the save. R
 3. Extract the complete ZIP into a new folder.
 4. Start **Dreamlight Editor - Public.exe** from that folder.
 
-The editor is portable and does not need to be installed. Do not run it from inside the ZIP, remove required files, or combine files from different versions.
+The editor is portable and does not need to be installed. The main folder contains the editor EXE, a short README, integrity files, and one `_internal` folder. Do not run it from inside the ZIP, remove the internal folder, or combine files from different versions.
+
+Users still running a **0.9.7** build must download 0.9.9 manually from the official release once. Users on **0.9.8-hardened-14** can receive the signed update through the normal updater after it is enabled.
 
 If Windows reports a missing runtime, install the free **Microsoft .NET 8 Desktop Runtime (x64)**.
+
+## Collection percentage note
+
+Some saves may show **100% for All Areas** while individual expansions or categories remain below 100%. Several conservative repair attempts did not change that combined value reliably, while the individual stored Collection data remained correct. Current evidence points to a game-side display or recalculation issue following a game update. The editor does not intentionally set every area to 100%, and it avoids a risky broad rewrite of real saves.
 
 ## 🚀 How to Use
 
