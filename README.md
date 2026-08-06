@@ -101,7 +101,7 @@ Beta tools are clearly marked because they can touch a wider part of the save. R
 
 The editor is portable and does not need to be installed. The main folder contains the editor EXE, a short README, integrity files, and one `_internal` folder. Do not run it from inside the ZIP, remove the internal folder, or combine files from different versions.
 
-Users still running a **0.9.7** build must download 0.9.9 manually from the official release once. Users on **0.9.8-hardened-14** can receive the signed update through the normal updater after it is enabled.
+Users still running a **0.9.7** build must download 0.9.9 manually from the official release once. Users on **0.9.8-hardened-14** can receive the signed update through the normal updater.
 
 If Windows reports a missing runtime, install the free **Microsoft .NET 8 Desktop Runtime (x64)**.
 
