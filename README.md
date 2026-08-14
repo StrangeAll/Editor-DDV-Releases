@@ -2,7 +2,7 @@
 
 A portable Windows save editor for Disney Dreamlight Valley, built to make careful changes easier to understand, review, and undo.
 
-Version 0.9.9 expands the repair tools, adds detailed long-term duty controls, improves safe bulk actions, and keeps the portable release folder much easier to understand.
+Version 1.0.0 brings the editor's current repair, item-management, comparison, safety, support, Scramblecoin, Touch of Magic, Collection, and signed-update tools together in one stable mandatory release. All bugs reported during testing and since the previous public release have been fixed in this build.
 
 📘 **Need detailed instructions?** Open the [complete DDV Wizard Editor User Guide](DDV_WIZARD_EDITOR_USER_GUIDE.md). It explains every category, backup workflow, bulk action, repair tool, warning, and common error.
 
@@ -32,6 +32,12 @@ Version 0.9.9 expands the repair tools, adds detailed long-term duty controls, i
 - Review, sort, complete, or carefully correct individual long-term duty progress.
 - Clean stuck objects from Floating Islands while preserving the travel well.
 - Unlock verified Scramblecoin figures or correct ranking points.
+- Search, add, and remove supported Touch of Magic motifs in a dedicated tab.
+- Add selected Premium, Twitch Drop, Scrooge Store, Star Path, and Event items through one source picker.
+- Restore Collection entries for items already owned with **Add All Owned Items to Collection (Beta)**.
+- Compare two saves side by side by category and preview unsaved changes before saving.
+- Use visible Undo and restorable session checkpoints while editing.
+- See how many of the five available save-profile slots are currently used.
 - Use dedicated Furniture views and bulk actions for Specials and Presets.
 - Create backups before important or immediate save operations.
 
@@ -67,7 +73,7 @@ Only import a complete, valid save structure. If you are unsure about a manual J
 
 The main editor provides organized views for supported save content such as player inventory, pets, clothes, houses, furniture, makeup, skins, wallpaper and flooring, meals, memories, and other available categories.
 
-Useful tools in version 0.9.9 include:
+Useful tools in version 1.0.0 include:
 
 - **Expansion filter** — show All Content, Base Game, Eternity Isle, Storybook Vale, Wishblossom Ranch, or Honeyglow Woods across the editor. This changes only the visible list and does not delete anything.
 - **Scrooge Store filter** — show supported Scrooge Store entries without changing save ownership.
@@ -89,6 +95,11 @@ Useful tools in version 0.9.9 include:
 - **Repair Miscategorized Inventory Items** — move supported entries back into the correct save inventory without adding items the player does not own.
 - **Player Inventory catalogue** — search supported backpack items, choose an amount, and review quest-item warnings before adding anything.
 - **Scramblecoin** — add verified figures or correct ranking points while preserving unrelated progress.
+- **Touch of Magic** — search, add, and remove supported motifs without replacing unrelated save data.
+- **Add Items by Source** — select Premium Items, Twitch Drops, Scrooge Store, Star Path, and Event sources individually or together while keeping protected rewards excluded.
+- **Add All Owned Items to Collection (Beta)** — restore Collection entries for supported items already owned without broadly completing unrelated groups.
+- **Save comparison and Safety Center** — compare relevant save categories side by side, review focused findings, and preview unsaved changes before writing the file.
+- **Undo and checkpoints** — undo the latest edit directly from the toolbar or restore a checkpoint created during the current session.
 
 Beta tools are clearly marked because they can touch a wider part of the save. Read their confirmation message and use them only for the problem they describe.
 
@@ -101,13 +112,11 @@ Beta tools are clearly marked because they can touch a wider part of the save. R
 
 The editor is portable and does not need to be installed. The main folder contains the editor EXE, a short README, integrity files, and one `_internal` folder. Do not run it from inside the ZIP, remove the internal folder, or combine files from different versions.
 
-Users still running a **0.9.7** build must download 0.9.9 manually from the official release once. Users on **0.9.8-hardened-14** can receive the signed update through the normal updater.
+Direct download: [DDV Wizard Editor 1.0.0 - Hardened 1](https://github.com/StrangeAll/Editor-DDV-Releases/releases/download/v1.0.0/DDV-Wizard-Editor-1.0.0-hardened-1-win-x64.zip)
+
+Users still running a **0.9.7** build must download 1.0.0 manually from the official release once. Users on **0.9.9-hardened-1** can receive this mandatory signed update through the normal updater.
 
 If Windows reports a missing runtime, install the free **Microsoft .NET 8 Desktop Runtime (x64)**.
-
-## Collection percentage note
-
-Some saves may show **100% for All Areas** while individual expansions or categories remain below 100%. Several conservative repair attempts did not change that combined value reliably, while the individual stored Collection data remained correct. Current evidence points to a game-side display or recalculation issue following a game update. The editor does not intentionally set every area to 100%, and it avoids a risky broad rewrite of real saves.
 
 ## 🚀 How to Use
 
@@ -121,7 +130,7 @@ Some saves may show **100% for All Areas** while individual expansions or catego
 8. Use **Tools > Save** for normal editor changes.
 9. Start the game and check the result carefully.
 
-Sign-in is normally remembered, so you should not need a new code every time the editor starts. One activation is intended for one Windows PC and can be linked to up to three different save profiles.
+Sign-in is normally remembered, so you should not need a new code every time the editor starts. One activation is intended for one Windows PC and can be linked to up to five different save profiles.
 
 Email sign-in was introduced because a small number of people used the free editor to make money from other players. The goal is to limit that misuse while keeping normal access simple for the community.
 

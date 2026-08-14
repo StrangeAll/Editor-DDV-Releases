@@ -72,7 +72,7 @@ If email delivery fails, support can create a temporary six-digit Support Code. 
 
 The sign-in is normally remembered on that computer. A new code should not be required every time the editor starts.
 
-A normal activation is intended for one Windows computer and can be connected to up to three different save profiles. Reinstalling the editor or downloading a newer build does not intentionally reset that profile limit.
+A normal activation is intended for one Windows computer and can be connected to up to five different save profiles. The editor shows the used and remaining slots. Reinstalling the editor or downloading a newer build does not intentionally reset that profile limit.
 
 The sign-in requirement exists because a small number of people used the free editor to make money from other players. It helps limit that misuse while keeping normal community access simple.
 
@@ -92,7 +92,7 @@ The sign-in requirement exists because a small number of people used the free ed
 
 The editor can receive updated item lists and corrections without requiring a completely new download.
 
-Users still on a **0.9.7** build must download version 0.9.9 manually once because those older builds cannot reliably install this full-editor update. Users on **0.9.8-hardened-14** can use the signed automatic updater after the release is enabled.
+Users still on a **0.9.7** build must download version 1.0.0 manually once because those older builds cannot reliably install this full-editor update. Users on **0.9.9-hardened-1** can use the signed automatic updater after the release is enabled.
 
 - Updates are checked during startup.
 - The downloaded editor data is protected and verified before use.
@@ -693,10 +693,6 @@ The save identity is connected to another activation. Support must review the le
 ### Editor version no longer authorized
 
 Old releases can be disabled when they are unsafe or incompatible. Download the newest official build and do not mix its files with the old folder.
-
-### All Areas shows 100% while individual areas are incomplete
-
-Some saves currently show 100% for the combined All Areas value even though individual expansions or categories remain below 100%. Conservative repair attempts did not change that combined value reliably while the individual stored Collection data remained correct. Current evidence points to a game-side display or recalculation issue following a game update. The editor does not intentionally set every area to 100% and avoids a risky broad rewrite of real saves.
 
 ### Update message appears
 
