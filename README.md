@@ -112,7 +112,7 @@ Beta tools are clearly marked because they can touch a wider part of the save. R
 
 The editor is portable and does not need to be installed. The main folder contains the editor EXE, a short README, integrity files, and one `_internal` folder. Do not run it from inside the ZIP, remove the internal folder, or combine files from different versions.
 
-Direct download: [DDV Wizard Editor 1.0.0 - Hardened 1](https://github.com/StrangeAll/Editor-DDV-Releases/releases/download/v1.0.0/DDV-Wizard-Editor-1.0.0-hardened-1-win-x64.zip)
+Direct download: [DDV Wizard Editor 1.0.0 - Hardened 2](https://github.com/StrangeAll/Editor-DDV-Releases/releases/download/v1.0.0/DDV-Wizard-Editor-1.0.0-hardened-2-win-x64.zip)
 
 Users still running a **0.9.7** build must download 1.0.0 manually from the official release once. Users on **0.9.9-hardened-1** can receive this mandatory signed update through the normal updater.
 

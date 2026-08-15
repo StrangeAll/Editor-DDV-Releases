@@ -1,8 +1,10 @@
-# DDV Wizard Editor 1.0.0 - Hardened 1
+# DDV Wizard Editor 1.0.0 - Hardened 2
 
 Changes since the previously published `0.9.9-hardened-1`. Internal dashboard changes are intentionally not included.
 
 All bugs reported during testing and since the previous public release were fixed for this build.
+
+The Hardened 2 hotfix restores full-editor updating for already installed 1.0.0 copies while keeping the visible release version at 1.0.0.
 
 ## Five save-profile slots
 
