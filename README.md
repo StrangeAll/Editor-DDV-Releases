@@ -174,6 +174,15 @@ When reporting a problem, include the editor version shown at the top, the categ
 - If an automatic data update is applied, restart the editor before checking the updated item list.
 - Share save files only through a private support channel.
 
+## ☕ Support the Project
+
+If you enjoy using DDV Wizard and would like to support
+my work or help cover the server costs, you can buy me a coffee.
+
+Of course, this is completely optional! 💙
+
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/K1M328VA9R)
+
 ## 💙 Disclaimer
 
 Dreamlight Editor is an unofficial fan-made tool. It is not affiliated with, endorsed by, or supported by Disney, Gameloft, or Disney Dreamlight Valley.
